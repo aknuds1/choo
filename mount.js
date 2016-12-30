@@ -1,7 +1,7 @@
 // mount.js
 const documentReady = require('document-ready')
 const assert = require('assert')
-const yo = require('yo-yo')
+const yo = require('@arve.knudsen/yo-yo')
 
 module.exports = mount
 

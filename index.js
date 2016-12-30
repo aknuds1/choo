@@ -8,7 +8,7 @@ const barracks = require('barracks')
 const nanoraf = require('nanoraf')
 const assert = require('assert')
 const xtend = require('xtend')
-const yo = require('yo-yo')
+const yo = require('@arve.knudsen/yo-yo')
 
 module.exports = choo
 
