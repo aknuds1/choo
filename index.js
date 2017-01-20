@@ -8,7 +8,7 @@ const barracks = require('barracks')
 const nanoraf = require('nanoraf')
 const assert = require('assert')
 const xtend = require('xtend')
-const yo = require('yo-yo')
+const yo = require('@arve.knudsen/yo-yo')
 
 module.exports = choo
 
@@ -64,6 +64,8 @@ function choo (opts) {
     const state = _store.state({state: {}})
 
     const tree = _router(state.location.href, state)
+    assert.ok(tree, 'choo.start: the router should always return a valid DOM node')
+    assert.equal(typeof tree, 'object', 'choo.start: the router should always return a valid DOM node')
     _rootNode = tree
     tree.done = done
 
