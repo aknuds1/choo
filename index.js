@@ -24,13 +24,16 @@ function choo (opts) {
   var _routes = null
   var _frame = null
 
-  _store.use({ onStateChange: render })
+  if (typeof window !== 'undefined') {
+    _store.use({ onStateChange: render })
+  }
   _store.use(opts)
 
   start.toString = toString
   start.router = router
   start.model = model
   start.start = start
+  start.stop = _store.stop
   start.use = use
 
   return start
