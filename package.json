@@ -1,5 +1,5 @@
 {
-  "name": "choo",
+  "name": "@arve.knudsen/choo",
   "version": "4.1.0",
   "description": "A 5kb framework for creating sturdy frontend applications",
   "main": "index.js",
@@ -19,7 +19,7 @@
     "instrument:minified": "./scripts/instrument minified",
     "instrument:gzip": "./scripts/instrument gzip"
   },
-  "repository": "yoshuawuyts/choo",
+  "repository": "aknuds1/choo",
   "keywords": [
     "client",
     "frontend",
