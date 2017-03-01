@@ -64,6 +64,7 @@ function choo (opts) {
     _store.model(createLocationModel(opts))
     const createSend = _store.start(opts)
     _router = start._router = createRouter(_routerOpts, _routes, createSend)
+    assert.notEqual(router, null)
     const state = _store.state({state: {}})
 
     const tree = _router(state.location.href, state)
