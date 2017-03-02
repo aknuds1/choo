@@ -64,7 +64,8 @@ function choo (opts) {
   function start () {
     _store.model(createLocationModel(opts))
     const createSend = _store.start(xtend(opts, {
-      subscriptions: false
+      subscriptions: false,
+      noSubscriptions: true
     }))
     _router = start._router = createRouter(_routerOpts, _routes, createSend)
     assert.notEqual(router, null)
