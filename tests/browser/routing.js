@@ -10,7 +10,7 @@ test('routing', function (t) {
 
     const history = Event()
     const choo = proxyquire('../..', {
-      'sheet-router/history': history.listen
+      '@arve.knudsen/sheet-router/history': history.listen
     })
 
     const app = choo()
@@ -65,7 +65,7 @@ test('routing', function (t) {
   //   resetLocation()
   //   const hash = Event()
   //   const choo = proxyquire('../..', {
-  //     'sheet-router/hash': hash.listen
+  //     '@arve.knudsen/sheet-router/hash': hash.listen
   //   })
 
   //   const app = choo({hash: true})
@@ -117,7 +117,7 @@ test('routing', function (t) {
 
     resetLocation()
     const choo = proxyquire('../..', {
-      'sheet-router/history': () => t.fail('history listener attached')
+      '@arve.knudsen/sheet-router/history': () => t.fail('history listener attached')
     })
 
     const app = choo({ history: false })
@@ -136,7 +136,7 @@ test('routing', function (t) {
     t.plan(1)
 
     const choo = proxyquire('../..', {
-      'sheet-router/href': () => t.fail('href listener attached')
+      '@arve.knudsen/sheet-router/href': () => t.fail('href listener attached')
     })
 
     const app = choo({ href: false })
