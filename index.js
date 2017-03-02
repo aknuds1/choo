@@ -69,10 +69,10 @@ function choo (opts) {
     _router = start._router = createRouter(_routerOpts, _routes, createSend)
     assert.notEqual(router, null)
     const state = _store.state({state: {}})
-    tick(function () {
+    ;(tick(function () {
       // Trigger subscriptions
       _store.start()
-    })
+    }))()
 
     const tree = _router(state.location.href, state)
     assert.ok(tree, 'choo.start: the router should always return a valid DOM node')
